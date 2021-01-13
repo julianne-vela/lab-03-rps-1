@@ -2,20 +2,22 @@
 
 HTML SETUP:
 
-- 2 radio buttons
+<!-- - 3 radio buttons -->
 
-  - Head and Tails
-  - Need the same 'name' and 'value'
+  <!-- - Rock, Paper, scissors -->
 
-- 3 images for rock, paper, scissors
+<!-- - Need the same 'name' and 'value' -->
 
-- button for user to play their choice
+<!-- - 3 images for rock, paper, scissors -->
 
-- empty divs/spans for text input
-  - Wins
-  - Losses
-  - total
-  - current result
+<!-- - button for user to play their choice -->
+
+<!-- - empty divs/spans for text input -->
+
+- Wins
+- Losses
+- total
+- current result
 
 JS
 
@@ -28,12 +30,15 @@ JS
 
 - Add event listeners
 - on click:
+
   1. store comps rps choice
 
+     - make comps choice random between R, P, and S
+     - use Math.random(). 0 rock, 1 paper, 2 scissors
 
-      - make comps choice random between R, P, and S
-      - use Math.random(). 0 rock, 1 paper, 2 scissors
   2. store user rps choice
+
   - get the checked input and get value
+
   3. compare users guess to comps guess
   4. Display the result

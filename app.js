@@ -1,5 +1,7 @@
-import { getRandomThrow } from './getRandomThrow.js';
-import { doesUserWin } from './doesUserWin.js';
+import {
+    getRandomThrow,
+    doesUserWin
+} from './function-utils.js';
 
 const goButton = document.getElementById('go-button');
 const currentPick = document.getElementById('current-pick');

@@ -14,16 +14,16 @@ HTML SETUP:
 
 <!-- - empty divs/spans for text input -->
 
-- Wins
-- Losses
-- total
-- current result
+<!-- - Wins -->
+<!-- - Losses -->
+<!-- - total -->
+<!-- - current result -->
 
 JS
 
-- Grab DOM elements - with id's
+<!-- - Grab DOM elements - with id's -->
 
-- Initalize state
+<!-- - Initalize state
 
   - start with wins = 0
   - start with losses = 0
@@ -34,11 +34,11 @@ JS
   1. store comps rps choice
 
      - make comps choice random between R, P, and S
-     - use Math.random(). 0 rock, 1 paper, 2 scissors
+     - use Math.random(). 1 rock, 2 paper, 3 scissors
 
   2. store user rps choice
 
   - get the checked input and get value
 
   3. compare users guess to comps guess
-  4. Display the result
+  4. Display the result -->

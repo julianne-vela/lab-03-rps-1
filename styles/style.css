@@ -13,12 +13,12 @@ body {
     --color5: hsla(224, 40%, 79%, 1); */
 
   --header-height: 80px;
-  --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
+  /* --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45); */
   --gutter: 30px;
   --footer-height: 25px;
 
   font-family: "Titillium Web", sans-serif;
-  background-color: var(--color2);
+  background-color: #999;
 }
 
 img {
@@ -39,6 +39,7 @@ input:checked + img {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .box2 {
@@ -55,6 +56,17 @@ main {
   justify-content: center;
   align-items: center;
   margin-bottom: calc(var(--footer-height));
+}
+
+.btn {
+  background: #333;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 section {
@@ -88,16 +100,11 @@ footer {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: bold;
-}
-
-.gutter-right {
-  margin-right: 20px;
-}
-
-.main-logo {
-  animation: pulse 5s infinite ease-in-out;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 header img {
@@ -106,21 +113,6 @@ header img {
 
 content {
   width: 80%;
-}
-
-p {
-  margin: var(--gutter);
-}
-
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  height: var(--footer-height);
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--color3);
-  box-shadow: var(--shadow);
 }
 
 @keyframes pulse {

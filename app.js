@@ -23,15 +23,15 @@ goButton.addEventListener('click', () => {
 
     if (theWinner === 'win') {
         wins++;
-        currentPick.textContent = `WINNER! You guessed ${userChoice}. The computer guess was ${compChoice}`; 
+        currentPick.textContent = `WINNER! You guessed ${userChoice}. The computers guess was ${compChoice}.`; 
     }
     else if (theWinner === 'lose') {
         lose++;
-        currentPick.textContent = `BUMMER! You guessed ${userChoice}. The computer guess was ${compChoice}`;
+        currentPick.textContent = `BUMMER! You guessed ${userChoice}. The computers guess was ${compChoice}.`;
     }
     else if (theWinner === 'draw') {
         draw++;
-        currentPick.textContent = `DRAW! You guessed ${userChoice}. The computer guess was ${compChoice}`;
+        currentPick.textContent = `DRAW! You guessed ${userChoice}. The computers guess was ${compChoice}.`;
     }
 
     winSpan.textContent = wins;

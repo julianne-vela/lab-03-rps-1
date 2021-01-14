@@ -1,68 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/home.css" />
     <title>Rock, Paper, Scissors!</title>
-  </head>
+</head>
 
-  <body>
-   <main>
-      <section class="main-section">
-        <h2>Rock Paper Scissors!</h2>
-        
-        <div class="box">
-            <label>
-               
-                <input type="radio" name="choice" value="rock" checked>
-                <img src="./assets/rock1.jpg" alt="">
-            </label>
-            <label>
-             
-                <input type="radio" name="choice" value="paper">
-                <img class="paper-img" src="./assets/paper1.jpg" alt="">
-            </label>
-            <label>
-                
-                <input type="radio" name="choice" value="scissors">
-                <img src="./assets/scissors1.png" alt="">
-            </label>
-        </div>
+<body>
+    <main>
+        <section class="main-section">
+            <h2>Rock Paper Scissors!</h2>
 
-        <button id="go-button" class="btn">GO!</button>
+            <content class="input-btn">
+                <label>
 
-        <div class="box2">
-            <div>
-             <span id="current-pick"></span>
-            </div>
-            <div>
-                Wins:
-                <span id="wins"></span>
-            </div>
-            <div>
-                Losses:
-                <span id="losses"></span>
-            </div>
-            <div>
-                Draw:
-                <span id="draws"></span>
-            </div>
-            <div>
-                Total Plays:
-                <span id="total-clicks"></span>
-            </div>
-        </div>
+                    <input type="radio" name="choice" value="rock" checked>
+                    <img src="./assets/rock1.jpg" alt="">
+                </label>
+                <label>
+
+                    <input type="radio" name="choice" value="paper">
+                    <img class="paper-img" src="./assets/paper1.jpg" alt="">
+                </label>
+                <label>
+
+                    <input type="radio" name="choice" value="scissors">
+                    <img src="./assets/scissors1.png" alt="">
+                </label>
+            </content>
+
+            <button id="go-button" class="btn">GO!</button>
+
+            <span class="results-span">
+                <div>
+                    <span id="current-pick"></span>
+                </div>
+                <div>
+                    Wins:
+                    <span id="wins"></span>
+                </div>
+                <div>
+                    Losses:
+                    <span id="losses"></span>
+                </div>
+                <div>
+                    Draw:
+                    <span id="draws"></span>
+                </div>
+                <div>
+                    Total Plays:
+                    <span id="total-clicks"></span>
+                </div>
+            </span>
 
     </main>
-    <footer></footer>
     <script type="module" src="app.js"></script>
-  </body>
+</body>
+
 </html>

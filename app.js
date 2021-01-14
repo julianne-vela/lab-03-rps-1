@@ -13,22 +13,10 @@ let lose = 0;
 let draw = 0;
 let total = 0;
 
-goButton.addEventListener('click', () => {
-    total++;
-
-    const compChoice = Math.round(Math.random() * 3);
-    const compThrow = getRandomThrow(compChoice);
-
-    const selectedButton = document.querySelector(`input[type='radio']:checked`);
-    
-    const userChoice = selectedButton.value;
-    const theWinner = doesUserWin(userChoice, compThrow);
-    
-    
-    
+function gameResults(theWinner, userChoice, compThrow) {
     if (theWinner === 'win') {
         wins++;
-        currentPick.textContent = `WINNER! You guessed ${userChoice}. The computers guess was ${compThrow}.`; 
+        currentPick.textContent = `WINNER! You guessed ${userChoice}. The computers guess was ${compThrow}.`;
     }
     else if (theWinner === 'lose') {
         lose++;
@@ -38,18 +26,26 @@ goButton.addEventListener('click', () => {
         draw++;
         currentPick.textContent = `DRAW! You guessed ${userChoice}. The computers guess was ${compThrow}.`;
     }
+}
 
+function updateResultsSpan() {
     winSpan.textContent = wins;
     loseSpan.textContent = lose;
     drawSpan.textContent = draw;
-    totalSpan.textContent = total;  
+    totalSpan.textContent = total;
+}
+
+goButton.addEventListener('click', () => {
+    total++;
+
+    const compChoice = Math.round(Math.random() * 3);
+    const compThrow = getRandomThrow(compChoice);
+    const selectedButton = document.querySelector(`input[type='radio']:checked`);
+    const userChoice = selectedButton.value;
+    const theWinner = doesUserWin(userChoice, compThrow);
+
+    gameResults(theWinner, userChoice, compThrow);
+
+    updateResultsSpan();
 });
-  
-
-
-
- 
-
-
-    
 

@@ -32,14 +32,17 @@ input {
 }
 
 input:checked + img {
-  border: dashed 5px #333;
+  border: dashed 5px #f6b62aff;
 }
 
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+}
+
+.box img {
+  margin: 10px;
 }
 
 .box2 {
@@ -59,7 +62,7 @@ main {
 }
 
 .btn {
-  background: #333;
+  background: #f4a489ff;
   color: #ffffff;
   border: none;
   font-size: 16px;
@@ -105,6 +108,9 @@ h2 {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   margin-bottom: 15px;
+  color: #333;
+  border: solid 1px #f4a489ff;
+  width: 100%;
 }
 
 header img {

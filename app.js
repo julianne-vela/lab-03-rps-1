@@ -1,4 +1,4 @@
-import { getRandomThrow } from '../getRandomThrow.js';
+import { getRandomThrow } from './getRandomThrow.js';
 import { doesUserWin } from './doesUserWin.js';
 
 const goButton = document.getElementById('go-button');
@@ -16,22 +16,27 @@ let total = 0;
 goButton.addEventListener('click', () => {
     total++;
 
-    const selectedButton = document.querySelector(`input[type='radio']:checked`);
-    const compChoice = getRandomThrow();
-    const userChoice = selectedButton.value;
-    const theWinner = doesUserWin(userChoice, compChoice);
+    const compChoice = Math.round(Math.random() * 3);
+    const compThrow = getRandomThrow(compChoice);
 
+    const selectedButton = document.querySelector(`input[type='radio']:checked`);
+    
+    const userChoice = selectedButton.value;
+    const theWinner = doesUserWin(userChoice, compThrow);
+    
+    
+    
     if (theWinner === 'win') {
         wins++;
-        currentPick.textContent = `WINNER! You guessed ${userChoice}. The computers guess was ${compChoice}.`; 
+        currentPick.textContent = `WINNER! You guessed ${userChoice}. The computers guess was ${compThrow}.`; 
     }
     else if (theWinner === 'lose') {
         lose++;
-        currentPick.textContent = `BUMMER! You guessed ${userChoice}. The computers guess was ${compChoice}.`;
+        currentPick.textContent = `BUMMER! You guessed ${userChoice}. The computers guess was ${compThrow}.`;
     }
     else if (theWinner === 'draw') {
         draw++;
-        currentPick.textContent = `DRAW! You guessed ${userChoice}. The computers guess was ${compChoice}.`;
+        currentPick.textContent = `DRAW! You guessed ${userChoice}. The computers guess was ${compThrow}.`;
     }
 
     winSpan.textContent = wins;
